@@ -6,9 +6,6 @@ tags : [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}
 
-This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
-Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
-
 第一次用python，简单写了个登陆知乎抓取登陆后个人页面的爬虫，记录下过程。
 
 # 1.安装
@@ -25,7 +22,7 @@ Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 # 3.代码
 
-```
+	
 import urllib  
 import sys  
 import http.cookiejar  
@@ -102,7 +99,7 @@ data = ungzip(data)
 f=open("results.html","w",encoding='utf-8')
 f.write(data.decode('utf-8'))
 webbrowser.open("results.html")  
-```
+	
 
 # 4.后续
 
