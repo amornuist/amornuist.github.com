@@ -22,84 +22,84 @@ tags : [intro, beginner, jekyll, tutorial]
 
 # 3.代码
 
-	
-import urllib  
-import sys  
-import http.cookiejar  
-import webbrowser
-import re
-import urllib.request
-from urllib.error import HTTPError
-import gzip
+---
+	import urllib  
+	import sys  
+	import http.cookiejar  
+	import webbrowser
+	import re
+	import urllib.request
+	from urllib.error import HTTPError
+	import gzip
 
-def ungzip(data):
-    try:        # 尝试解压
-        print('正在解压.....')
-        data = gzip.decompress(data)
-        print('解压完毕!')
-    except:
-        print('未经压缩, 无需解压')
-    return data
-cj = http.cookiejar.CookieJar()   
-def getOpener(head):
-    # deal with the Cookies
-    global cj
-    pro = urllib.request.HTTPCookieProcessor(cj)
-    opener = urllib.request.build_opener(pro)
-    header = []
-    for key, value in head.items():
-        elem = (key, value)
-        header.append(elem)
-    opener.addheaders = header
-    return opener 
+	def ungzip(data):
+		try:        # 尝试解压
+			print('正在解压.....')
+			data = gzip.decompress(data)
+			print('解压完毕!')
+		except:
+			print('未经压缩, 无需解压')
+		return data
+	cj = http.cookiejar.CookieJar()   
+	def getOpener(head):
+		# deal with the Cookies
+		global cj
+		pro = urllib.request.HTTPCookieProcessor(cj)
+		opener = urllib.request.build_opener(pro)
+		header = []
+		for key, value in head.items():
+			elem = (key, value)
+			header.append(elem)
+		opener.addheaders = header
+		return opener 
 
-#先在登陆页面获取_xsrf参数  
-def getXSRF(data):
-    cer = re.compile('name=\"_xsrf\" value=\"(.*)\"', flags = 0)
-    strlist = cer.findall(data)
-    return strlist[0]
+	#先在登陆页面获取_xsrf参数  
+	def getXSRF(data):
+		cer = re.compile('name=\"_xsrf\" value=\"(.*)\"', flags = 0)
+		strlist = cer.findall(data)
+		return strlist[0]
 
-#设置头信息，用firebug插件抓取即可
-header = {
-    'Connection': 'Keep-Alive',
-    'Accept': 'text/html, application/xhtml+xml, */*',
-    'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0',
-    'Accept-Encoding': 'gzip, deflate',
-    'Host': 'www.zhihu.com',
-    'DNT': '1'
-}
+	#设置头信息，用firebug插件抓取即可
+	header = {
+		'Connection': 'Keep-Alive',
+		'Accept': 'text/html, application/xhtml+xml, */*',
+		'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+		'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0',
+		'Accept-Encoding': 'gzip, deflate',
+		'Host': 'www.zhihu.com',
+		'DNT': '1'
+	}
 
-url = 'http://www.zhihu.com/'
-opener = getOpener(header)
-op = opener.open(url)
-for ck in cj: 
-    print(ck.name,':',ck.value)
-data = op.read()
-data = ungzip(data)     # 解压
-_xsrf = getXSRF(data.decode())
+	url = 'http://www.zhihu.com/'
+	opener = getOpener(header)
+	op = opener.open(url)
+	for ck in cj: 
+		print(ck.name,':',ck.value)
+	data = op.read()
+	data = ungzip(data)     # 解压
+	_xsrf = getXSRF(data.decode())
 
-url += 'login/email'
+	url += 'login/email'
 
-#设置post信息，同样利用firebug插件抓取,因为知乎登陆不需要验证码，所以可以直接设置
-postDict = {
-        '_xsrf':_xsrf,
-        'email':'',
-        'captcha':'',
-        'password':'',
-        'remember_me':'true'
-}
-postData = urllib.parse.urlencode(postDict).encode()
-print(postData)
-op = opener.open(url, postData)
-testurl="https://www.zhihu.com/people/xi-e-79"
-op=opener.open(testurl)
-data = op.read()
-data = ungzip(data)
-f=open("results.html","w",encoding='utf-8')
-f.write(data.decode('utf-8'))
-webbrowser.open("results.html")  
-	
+	#设置post信息，同样利用firebug插件抓取,因为知乎登陆不需要验证码，所以可以直接设置
+	postDict = {
+			'_xsrf':_xsrf,
+			'email':'',
+			'captcha':'',
+			'password':'',
+			'remember_me':'true'
+	}
+	postData = urllib.parse.urlencode(postDict).encode()
+	print(postData)
+	op = opener.open(url, postData)
+	testurl="https://www.zhihu.com/people/xi-e-79"
+	op=opener.open(testurl)
+	data = op.read()
+	data = ungzip(data)
+	f=open("results.html","w",encoding='utf-8')
+	f.write(data.decode('utf-8'))
+	webbrowser.open("results.html")  
+---
 
 # 4.后续
 
