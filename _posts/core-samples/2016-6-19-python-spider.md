@@ -23,6 +23,7 @@ tags : [intro, beginner, jekyll, tutorial]
 # 3.代码
 
 ---
+
 	import urllib  
 	import sys  
 	import http.cookiejar  
@@ -99,6 +100,7 @@ tags : [intro, beginner, jekyll, tutorial]
 	f=open("results.html","w",encoding='utf-8')
 	f.write(data.decode('utf-8'))
 	webbrowser.open("results.html")  
+	
 ---
 
 # 4.后续
