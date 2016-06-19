@@ -101,7 +101,7 @@ tags : [intro, beginner, jekyll, tutorial]
 	f=open("results.html","w",encoding='utf-8')
 	f.write(data.decode('utf-8'))
 	webbrowser.open("results.html")  
-</pre></code>
+</code></pre>
 ---
 
 # 4.后续
