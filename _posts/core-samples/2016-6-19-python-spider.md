@@ -10,6 +10,9 @@ This Jekyll introduction will outline specifically  what Jekyll is and why you w
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 ##1.下载python
+
 ##2.安装pip
+
 ##3.爬虫
-##4.代码
+
+##4.pip
