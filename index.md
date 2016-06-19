@@ -1,24 +1,24 @@
----
+ï»¿---
 layout: page
-title: ÈçºÎ´î½¨¸öÈËblog!
-tagline: Ò°Íû
+title: å¦‚ä½•æ­å»ºä¸ªäººblog!
+tagline: é‡æœ›
 ---
 {% include JB/setup %}
 
-##1.ÏÂÔØgit
+##1.ä¸‹è½½git
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
-#2.½¨Á¢github¿â
+#2.å»ºç«‹githubåº“
 
 The theme should reference these variables whenever needed.
     
-#3.ÀûÓÃ Jekyll Bootstrap¿ò¼Ü´î½¨
+#3.åˆ©ç”¨ Jekyll Bootstrapæ¡†æ¶æ­å»º
 
 This blog contains sample posts which help stage pages and blog data.
 When you don't need the samples anymore just delete the `_posts/core-samples` folder.
 
-#4. Jekyll Bootstrap+github´î½¨
+#4. Jekyll Bootstrap+githubæ­å»º
 
 This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
 We need to clean up the themes, make theme usage guides with theme-specific markup examples.
