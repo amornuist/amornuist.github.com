@@ -112,6 +112,7 @@ hr {
 /* line 99, ../_sass/_base.scss */
 .container > footer {
   margin-bottom: 5px;
+  text-align: center;
   clear: both;
 }
 
