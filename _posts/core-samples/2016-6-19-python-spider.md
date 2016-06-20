@@ -6,21 +6,30 @@ tags : [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}
 
+
 第一次用python，简单写了个登陆知乎抓取登陆后个人页面的爬虫，记录下过程。
 
-# 1.安装
+## 1.安装
+
+---
 
 在python官网下载python3.4：_https://www.python.org/_，下载之后再path里设置下环境变量即可。但python自带的编辑器用起来实在谈不上方便，所以这里还是用_sublime_来写代码，当然在sublime里装上pip扩展，这样就可以在sublime里随意安装各种功能丰富的插件。
 
-# 2.爬虫思路
+---
+
+## 2.爬虫思路
+
+---
 
 主要用到urllib和http.cookiejar函数库，函数都比较简单。需要注意的有以下几点
 
-> 1.登陆时要有header信息和post信息，这和http协议有关，很多网站会反爬虫，为骗过服务器需要将header信息写到程序里，伪装成浏览器传给服务器；传输方式一般是get和post两种方式，一般网页登陆用post传输，这时候就需要把post信息也写进去。可以用firebug插件来抓取这些信息。
+> -登陆时要有header信息和post信息，这和http协议有关，很多网站会反爬虫，为骗过服务器需要将header信息写到程序里，伪装成浏览器传给服务器；传输方式一般是get和post两种方式，一般网页登陆用post传输，这时候就需要把post信息也写进去。可以用firebug插件来抓取这些信息。
 > 
-> 2.有时服务器为验证身份，会传一个会话cookie，类似于你的身份证，这时候就需要有cookie信息，这里用http.cookiejar来解决这一问题。当然会有些网站这种方法还获取不到sessionid，可以考虑别的函数库来解决，也可以手动把sessionid写到post里，当然这种方法时效很短。
+> -有时服务器为验证身份，会传一个会话cookie，类似于你的身份证，这时候就需要有cookie信息，这里用http.cookiejar来解决这一问题。当然会有些网站这种方法还获取不到sessionid，可以考虑别的函数库来解决，也可以手动把sessionid写到post里，当然这种方法时效很短。
 
-# 3.代码
+---
+
+## 3.代码
 
 ---
 
@@ -107,6 +116,10 @@ tags : [intro, beginner, jekyll, tutorial]
 
 ---
 
-# 4.后续
+## 4.后续
+
+---
 
 当然实际情况并不都是这么简答，比如很多网站sessionid并不能通过上述函数得到，比如登陆需要输入验证码，比如网页中有很多js代码，通过抓取源代码并不能抓到想要的数据，这些问题都有待后续继续学习解决。
+
+---
