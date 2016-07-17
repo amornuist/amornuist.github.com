@@ -12,7 +12,7 @@ tagline: 野望
 
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-  <ul>
+  <ul class="posts">
     {% assign pages_list = tag[1] %}  
 	{{ post.excerpt }}
     {% include JB/pages_list %}
