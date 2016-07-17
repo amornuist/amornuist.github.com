@@ -5,8 +5,6 @@ tagline: "Supporting tagline"
 tags : [python, spider]
 ---
 {% include JB/setup %}
-
-
 第一次用python，简单写了个登陆知乎抓取登陆后个人页面的爬虫，记录下过程。
 
 ## 1. 安装
