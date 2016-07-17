@@ -13,7 +13,7 @@ tagline: blog 个人博客 野望
 author :
   name : wangya
   email : 591361052@qq.com
-  github : 591361052@qq.com
+  github : https://github.com/amornuist/amornuist.github.com
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -23,7 +23,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://amornuist.github.io
 
 gems: ["jekyll-sitemap"]
 

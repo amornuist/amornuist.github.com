@@ -1,6 +1,6 @@
 ---
 layout: default
-category : lessons
+category : spider
 tagline: "Supporting tagline"
 tags : [intro, beginner, jekyll, tutorial]
 ---
@@ -13,7 +13,7 @@ tags : [intro, beginner, jekyll, tutorial]
 
 ---
 
-在python官网下载python3.4：_https://www.python.org/_，下载之后再path里设置下环境变量即可。但python自带的编辑器用起来实在谈不上方便，所以这里还是用_sublime_来写代码，当然在sublime里装上pip扩展，这样就可以在sublime里随意安装各种功能丰富的插件。
+在python官网下载python3.4：_https://www.python.org/_，下载之后再path里设置下环境变量即可。但python自带的编辑器用起来实在谈不上方便，所以这里还是用 _sublime_ 来写代码，当然在sublime里装上pip扩展，这样就可以在sublime里随意安装各种功能丰富的插件。
 
 ---
 
