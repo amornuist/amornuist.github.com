@@ -2,7 +2,7 @@
 layout: default
 category : spider
 tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+tags : [python, spider]
 ---
 {% include JB/setup %}
 
