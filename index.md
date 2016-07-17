@@ -14,6 +14,7 @@ tagline: 野望
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
   <ul>
     {% assign pages_list = tag[1] %}  
+	{{ post.excerpt }}
     {% include JB/pages_list %}
   </ul>
 {% endfor %}
