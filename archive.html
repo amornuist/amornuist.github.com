@@ -6,7 +6,8 @@ group: navigation
 ---
 {% include JB/setup %}
   {% for post in site.posts %}
-	{% if post.tags =='python' %}
+  {% for tag in post.tags %}
+	{% if tag[0] =='python' %}
   <ul>
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
@@ -15,5 +16,6 @@ group: navigation
     </li>
 	</ul>
 	  {% endif %}
+  {% endfor %}
   {% endfor %}
   
