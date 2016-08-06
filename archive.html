@@ -15,7 +15,18 @@ group: navigation
 	</ul>
   {% endfor %}
    -->
-{% include JB/setup %}
+{% include JB/setup %}   
+{% for tag in site.tags %} 
+	{% if tag[0] == 'python' %}
+		<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+		<ul>
+		{% assign post_list = tag[1] %}  
+		{% include JB/post_list %}
+		</ul>
+	{% endif %}
+{% endfor %}
+
+<!-- {% include JB/setup %}
 {% for post in site.posts %}
 	{% for tag in post.tags %}
 		{% if tag[0] == 'python' %}
@@ -28,4 +39,4 @@ group: navigation
 			</ul>
 		{% endif %}
 	{% endfor %}
-{% endfor %}
+{% endfor %} -->
