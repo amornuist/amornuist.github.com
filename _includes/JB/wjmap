@@ -1,0 +1,7 @@
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=b07bc696ed40e9454c5609203737c55d"></script> 
+<div id="container"></div>  
+var map = new AMap.Map('container');
+    var map = new AMap.Map('container',{
+        zoom: 10,
+        center: [116.39,39.9]
+    });
