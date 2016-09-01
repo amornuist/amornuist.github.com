@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 category : spider
 tagline: "Supporting tagline"
 tags : [python, spider]
