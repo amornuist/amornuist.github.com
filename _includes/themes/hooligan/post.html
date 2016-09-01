@@ -32,8 +32,6 @@
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
   </head>
-
-
 <!-- <div class="page-header">
   <h1>
     {{ page.title }} 
@@ -42,7 +40,6 @@
     {% endif %}
   </h1>
 </div> -->
-
   <body style="margin:0; padding:0;" >
     <div id="page-wrap" >
       <div class="navbar" style="height:60px;" >
@@ -113,8 +110,8 @@
         </div>
       </div>
 
-	<div class="row">
-	  <div class="span8">
+	 <div class="container" style="height:500px; width:1309; overflow:hidden;overflow-y:auto;">
+        <div class="content">
 		{{ content }}
 		<hr>
 		<div class="pagination btn-group">
@@ -135,7 +132,7 @@
 	  </div>
 	  
 	<!--   <div class="span4"> -->
-		<section>
+<!-- 		<section> -->
 		  <h4>Published</h4>
 		  <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 		  {% if page.updated %}
@@ -143,7 +140,7 @@
 		  <div class="date"><span>{{ page.updated | date_to_long_string }}</span></div>
 		  {% endif %}     
 		</section>
-		{% if page.categories %}
+<!-- 		{% if page.categories %}
 		  <section>
 			<h4>{% if page.categories.size == 1 %}Category{% else %}Categories{% endif %}</h4>
 			{% for category in page.categories %}
@@ -161,11 +158,10 @@
 			  {% include JB/tags_list %}
 			</ul>
 		  </section>
-		{% endunless %}         
+		{% endunless %}    -->      
 	  </div>
 	</div>
 
-    </div><!--/.page-wrap -->
 
 	<div style="position:absolute; text-align:center;margin:0px auto;width:1366px;height: 18px;">  <!-- absolute;bottom:0; -->
 	<footer style="height:100%;">
