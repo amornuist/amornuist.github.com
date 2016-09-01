@@ -1,10 +1,4 @@
-<style type="text/css">
-  content,#container {
-	width: 50%;
-	height: 50%;
-}
-  </style>
-  
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
 <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
 <script src="http://webapi.amap.com/maps?v=1.3&key=b07bc696ed40e9454c5609203737c55d"></script>
 <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
