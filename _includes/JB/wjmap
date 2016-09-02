@@ -19,6 +19,7 @@
 	
 	<div id="container"></div> 
 	<script type="text/javascript">
+	document.write("Hello World!")
     var map = new AMap.Map('container', {
         resizeEnable: true,
         zoom:11,
