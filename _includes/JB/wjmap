@@ -14,7 +14,7 @@
 }
 	</style>
     <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
-    <script src=_include/gaodemaoapi.js></script>
+    <script src=_include/gaodemapapi.js></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 	
 	<div id="container">
