@@ -14,7 +14,7 @@
 }
 	</style>
     <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
-    <script src={{ _INCLUDE PATH }}/gaodemapapi.js></script>
+    <script src="{{ ASSET_PATH }}/js/gaodemapapi.js"></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 	
 	<div id="container">
